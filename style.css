@@ -1,0 +1,903 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+#caution{
+  margin-top: 50px;
+  padding-top: 5px;
+  color: red;
+  background-color: yellow;
+
+}
+
+body{
+  background-color: #080808;
+  color: #fff;
+}
+
+#header{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: cover;
+  background-position: center;
+  background-size: cover;
+}
+
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/images/image.png) no-repeat center;
+  background-size: cover;
+  filter: brightness(0.3) blur(7px);
+  z-index: -1;
+}
+
+.container{
+  padding: 10px 10%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.logo{
+  width: 80px;
+  border-radius: 50%;
+
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+
+}
+
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: aqua;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+
+}
+
+nav ul li a:hover::after{
+  width: 100%;
+
+}
+
+nav ul li a:hover{
+  color: aqua;
+  transition: 0.5s;
+}
+
+.header-text{
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+.header-text h1{
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text h1 span{
+  color: aqua;
+}
+
+/*bottom content home page*/
+/* faculties */
+
+.faculties{
+  text-decoration: underline 2px solid red;
+}
+
+.first-yr{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.container1{
+  padding: 10px 10%;
+  margin-bottom: 80px;
+}
+
+.dep-para{
+  margin-top: 35px;
+  display: block;
+}
+
+.dep-para h3{
+  margin-bottom: 10px;
+}
+
+#faculties{
+  padding: 50px 0;
+}
+
+.work-list1{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work-list2{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+
+}
+
+.work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work2{
+  border-radius: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+
+}
+
+.work2 img{
+  width: 100%;
+  border-radius: 60px;
+  
+  display: block;
+  transition: transform 0.5s;
+
+}
+
+.layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.2),aqua);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3{
+  font-weight: 500;
+  margin-bottom: 20px;
+
+}
+
+.layer a{
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+
+}
+
+.work:hover img{
+ transform: scale(1.1);
+}
+
+.work:hover .layer{
+  height: 100%;
+}
+
+.work2:hover img{
+  transform: scale(1.1);
+ }
+ 
+ .work2:hover .layer{
+   height: 100%;
+ }
+
+
+.btn{
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+  border: 1px solid aqua;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+
+}
+
+.btn:hover{
+  background:aqua;
+  color: #080808;
+}
+
+
+.span{
+  color: #ff004f;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.container2{
+  padding: 10px 10%;
+}
+
+/*-----------notes---------*/
+#container2 {
+  background-color: transparent;
+  border: 2px solid #ff004f;
+  padding: 50px; /* Uniform padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin-left: 36%;
+  margin-bottom: 50px;
+  animation: animated-border 3s linear infinite alternate; /* Adjusted duration for potentially better visual */
+}
+
+@keyframes animated-border {
+  0% {
+    border-color: #ff004f;
+  }
+  100% {
+    border-color: #007bff; /* Change to your desired second color */
+  }
+}
+
+    
+     
+
+select {
+width: 100%; /* Make select full width of container */
+padding: 10px;
+margin: 10px 0 15px 0; /* Adjust margin */
+border-radius: 5px;
+border: 1px solid #ccc;
+box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+label {
+display: block;
+margin-top: 15px;
+font-weight: lighter;
+color: rgba(239, 228, 228, 0.323);
+}
+h2 {
+  text-align: center;
+  color: #eee;
+  margin-bottom: 20px;
+}
+/* Style for disabled dropdowns */
+select:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+/* Style for placeholder options */
+option[value=""] {
+  color: black;
+}
+
+#branch,
+#branch::before,
+#branch::after {
+  background-color:black;
+  color:#fff;
+  border: 2px solid aqua;
+  animation: animated-branch-border 3s linear infinite alternate; /* Apply the same animation to all */
+}
+
+
+
+#branch {
+  position: relative; 
+  padding: 10px; /
+
+}
+
+#branch::before,
+#branch::after {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  right: -5px; 
+  bottom: -5px; 
+  z-index: -1; /* Place behind the text */
+}
+
+
+
+#branch::after {
+  
+  animation-delay: 0.1s;
+}
+
+#year,
+#year::before,
+#year::after {
+  background-color: black;
+  color: #ccc;
+  border: 2px solid aqua;
+  animation: animated-branch-border 3s linear infinite alternate; /* Apply the same animation to all */
+}
+
+
+
+
+#year {
+  position: relative; 
+  padding: 10px; 
+  
+  
+}
+
+#year::before,
+#year::after {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  right: -5px; 
+  bottom: -5px; 
+  z-index: -1; /* Place behind the text */
+}
+
+
+
+#year::after {
+  
+  animation-delay: 0.1s;
+}
+
+/*--------sem--------*/
+
+
+#semester,
+#semester::before,
+#semester::after {
+  background-color: black;
+  color: #ccc;
+  border: 2px solid aqua;
+  animation: animated-branch-border 3s linear infinite alternate; /* Apply the same animation to all */
+}
+
+
+
+#semester {
+  position: relative; 
+  padding: 10px; /
+  
+}
+
+#semester::before,
+#semester::after {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  right: -5px; 
+  bottom: -5px; 
+  z-index: -1; /* Place behind the text */
+}
+
+
+
+#semester::after {
+  
+  animation-delay: 0.1s;
+}
+
+/*---subject---*/
+
+#subject,
+#subject::before,
+#subject::after {
+  background-color: black;
+  color: #ccc;
+  border: 2px solid aqua;
+  animation: animated-branch-border 3s linear infinite alternate; /* Apply the same animation to all */
+}
+
+@keyframes animated-branch-border {
+  0% {
+    border-color: aqua;
+  }
+  100% {
+    border-color: yellowgreen; /* Change to your desired second color */
+  }
+  100% {
+    border-color: #ff004f; /* Change to your desired second color */
+  }
+}
+
+
+#subject{
+  position: relative; 
+  padding: 10px; /
+  
+}
+
+#subject::before,
+#subject::after {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  right: -5px; 
+  bottom: -5px; 
+  z-index: -1; /* Place behind the text */
+}
+
+
+
+#subject::after {
+  
+  animation-delay: 0.1s;
+}
+
+.selection::before{
+  background-color: black;
+  color: white;
+}
+
+.selection::after{
+  background-color: black;
+  color: white;
+}
+
+.selection{
+  background-color: black;
+  color: white;
+}
+
+/*-----------Syallabus---------*/
+.Syllabus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 110px;
+  border: 2px solid #007bff; /* Initial border */
+  border-radius: 8px;
+  margin: 100px auto;
+  width: fit-content;
+  background-color: none;
+  animation: animated-border 5s linear infinite alternate; /* Apply border animation */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+}
+
+.Syllabus:hover{
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
+  border-color: #28a745; /* Change border color on hover */
+  /* You can add more beautiful animations or style changes here */
+}
+
+@keyframes animated-border {
+  0% {
+    border-color: #007bff; /* Start color */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Optional glow */
+  }
+  100% {
+    border-color: #ff6f00; /* End color (you can choose another) */
+    box-shadow: 0 0 15px rgba(255, 111, 0, 0.7); /* Optional glow */
+  }
+}
+
+.syl-h2 {
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  
+}
+
+.downloadBtn {
+  padding: 10px 20px;
+  background-color:transparent;
+  color: white;
+  border: 2px solid #003a80;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 0;
+  transition: 0.9s;
+ 
+}
+
+
+.downloadBtn:hover {
+  
+  border:2px solid #ff004f;
+  background: transparent;
+}
+
+.downloadBtn:active {
+  background-color: transparent;
+  border: 2px solid #de6a11;
+}
+
+/*=============learn code====================*/
+.code-container {
+  display: flex; /* Arrange the two containers side by side */
+  flex-direction: row; /* Ensure horizontal arrangement */
+  justify-content: center; /* Center the containers horizontally */
+  align-items: flex-start; /* Align items to the top */
+  gap: 90px; /* Space between the two containers */
+  padding: 20px; /* Add some padding around the containers */
+}
+
+.code {
+  display: flex;
+  flex-direction: column; /* Arrange buttons vertically */
+  align-items: center; /* Center buttons horizontally within the container */
+  padding: 80px; /* Reduced padding for better side-by-side layout */
+  border: 2px solid #007bff; /* Initial border */
+  border-radius: 8px;
+  margin: 20px 0; /* Adjust vertical margin */
+  width: fit-content; /* Adjust width to content */
+  background-color: transparent; /* Optional background */
+  animation: animated-border 5s linear infinite alternate; /* Apply border animation */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+@keyframes animated-border {
+  0% {
+    border-color: #007bff; /* Start color */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Optional glow */
+  }
+  100% {
+    border-color: #673ab7; /* End color (purple) */
+    box-shadow: 0 0 10px rgba(103, 58, 183, 0.7); /* Optional glow */
+  }
+}
+
+.code-h2 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.codebtn {
+  display: block; /* Make buttons take up full width and stack vertically */
+  padding: 8px 15px; /* Adjust padding for smaller buttons */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Adjust font size for smaller buttons */
+  text-align: center; /* Center text within the button */
+  margin-bottom: 8px; /* Adjust spacing between buttons */
+  text-decoration: none; /* Remove underline from the link */
+  transition: background-color 0.3s ease;
+  width: 150px; /* Set a fixed width for the buttons */
+}
+
+.codebtn:hover {
+  background-color: #0056b3;
+}
+
+.codebtn:active {
+  background-color: #003a80;
+}
+
+.codebtn a {
+  color: white; /* Ensure link text is white */
+  text-decoration: none; /* Remove underline from links inside buttons */
+  display: block; /* Make the link fill the entire button for easier clicking */
+  width: 100%;
+  height: 100%;
+}
+.code1 {
+  display: flex;
+  flex-direction: column; /* Arrange buttons vertically */
+  align-items: center; /* Center buttons horizontally within the container */
+  padding: 50px; /* Reduced padding for better side-by-side layout */
+  border: 2px solid #007bff; /* Initial border */
+  border-radius: 8px;
+  margin: 20px 0; /* Adjust vertical margin */
+  width: fit-content; /* Adjust width to content */
+  background-color: transparent; /* Optional background */
+  animation: animated-border 5s linear infinite alternate;
+  margin-top: 70px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Added transitions */
+}
+
+.code1:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
+  border-color: #28a745; /* Change border color on hover */
+  /* You can add more beautiful animations or style changes here */
+}
+
+.code:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
+  border-color: #28a745; /* Change border color on hover */
+  /* You can add more beautiful animations or style changes here */
+}
+.fa-bars {
+  display: none; /* Hide the menu icon on desktop */
+}
+
+
+
+
+
+/* ----------- Media Queries for Responsive Design ------------ */
+
+/* For small devices (phones, width less than 600px) */
+/* Mobile Styles (max-width: 768px is a common breakpoint) */
+/* Mobile Styles (max-width: 768px is a common breakpoint) */
+/* Mobile Styles (max-width: 768px is a common breakpoint) */
+/* Mobile Styles (max-width: 768px is a common breakpoint) */
+ 
+@media screen and (max-width: 768px) {
+  /* General adjustments for smaller screens */
+  .container, .container1, .container2 {
+    padding: 10px 5%; /* Reduce horizontal padding on mobile */
+  }
+
+  /* Header section adjustments */
+  #header {
+    height: auto; /* Allow header to expand vertically on smaller screens */
+    padding-bottom: 20px; /* Add some padding at the bottom */
+    position: relative; /* Needed for absolute positioning of the menu */
+    
+  }
+
+  .header-text {
+    margin-top: 40%; /* Adjust top margin for better spacing on mobile */
+    font-size: 24px; /* Reduce font size for header text */
+    text-align: center; /* Center the text */
+  }
+
+  .header-text h1 {
+    font-size: 36px; /* Reduce heading size on mobile */
+  }
+
+  nav {
+    flex-direction: row; /* Keep logo and menu icon in a row */
+    align-items: center; /* Vertically center logo and icon */
+    justify-content: space-between; /* Space between logo and icon */
+    padding: 10px 5%; /* Add padding similar to container */
+    position: relative; /* Important for mobile menu positioning */
+  }
+
+  nav ul {
+    display: none; /* Initially hide the menu */
+    flex-direction: column; /* Stack nav links vertically */
+    text-align: left; /* Align nav links to the left */
+    width: 250px; /* Width of the sliding menu */
+    height: 100vh; /* Full viewport height */
+    background-color: #080808; /* Background for the menu */
+    position: fixed; /* Use fixed positioning */
+    top: 0;          /* Position at the top */
+    right: 0;       /* Start off-screen to the right */
+    z-index: 1000; /* Ensure it's above everything else */
+    transform: translateX(100%); /* Start completely off-screen */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    border-left: 1px solid #333; /* Add a border */
+    padding-top: 80px; /* Add padding to the top to account for close button */
+    box-sizing: border-box; /* Include padding in width/height */
+  }
+
+  nav ul.active {
+    display: flex; /* Show the menu when active class is applied (using JS) */
+    transform: translateX(0); /* Slide the menu into view */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Adjust link spacing */
+    margin-left: 20px; /* Add left margin for the links */
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .logo {
+    width: 80px; /* Make logo smaller on mobile */
+  }
+
+  .fa-bars {
+    display: none; /* Initially hide the menu icon */
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    order: 1; /*change the order of icon*/
+  }
+  .fa-xmark {
+    color: #ff004f;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 30px;
+    z-index: 1001;
+    margin-left: 30px;
+  }
+
+  /* Faculties Section */
+  #faculties .work-list1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #faculties .work {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  #faculties .dep-para {
+    width: 100%;
+    margin-left: 0;
+    padding: 0px;
+  }
+
+  /* Notes Selection Section */
+  #container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  #container2 label,
+  #container2 select {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  /* Learn Code Section */
+  .code-container {
+    flex-direction: column;
+  }
+
+  .code1,
+  .code {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .codebtn {
+    width: 100%;
+  }
+
+  /* Syllabus Section */
+  .Syllabus {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .downloadBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Adjustments for very small screens (optional) */
+  @media screen and (max-width: 320px) {
+    .header-text h1 {
+      font-size: 28px;
+    }
+  }
+
+/* Styles for desktop mode (min-width: 769px) */
+@media screen and (min-width: 769px) {
+.fa-bars {
+  display: none; /* Hide the menu icon on desktop */
+}
+
+nav ul{
+  display: flex !important;
+  position: relative;
+  height: auto;
+  width: auto;
+  transform: translateX(0);
+  background-color: transparent;
+  border: none;
+  padding-top: 0;
+
+}
+nav ul li{
+  margin-left: 20px;
+}
+nav ul li a{
+  color: #fff;
+}
+.fa-xmark{
+  display: none;
+}
+}
+}
+
+    footer {
+      background-color: #080808;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95em;
+      border-top: 2px solid aqua;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer a {
+      color: aqua;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .name {
+      color: #0ff;
+      font-weight: 600;
+      font-style: italic;
+      margin-left: 10px;
+    }

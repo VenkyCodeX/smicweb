@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMIC Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fef99b3935.js" crossorigin="anonymous"></script>
+</head>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/assets/images/logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-circle-xmark close-menu"></i>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#faculties">faculties</a></li>
+                    <li><a href="#container2">notes</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    
+                    
+                </ul>
+                <i class="fa-solid fa-bars open-menu"></i>
+            </nav>
+              <div id="caution"><h4>🚧 Website Under Development
+Currently, this portal is available only for 1st Year students as their semester exams are approaching.
+We’re actively working on adding notes for all other years and branches.
+The complete version of this website will be available very soon.
+     <br>Thank you for your patience and support! 🙏 <br>
+
+             <pre>                                                     — SMIC Notes Portal Team  </pre></h4></div> 
+            <div class="header-text">
+                <p></p>
+                <h1>Welcome To <span> SMIC </span> <br>Portal </h1>
+            </div>
+        </div>
+    </div>
+ 
+   
+  <!---------faculties-->
+  <div id="faculties">
+    <div class="container1">
+        <h1 class="sub-tittle">Department Heads</h1>
+        <div class="work-list1">
+            <div class="work">
+                <img src="/assets/images/image.png" alt="">
+                <div class="layer">
+                    <h3>Principle</h3>
+                    <p>shri <span class="span">bhalubhan</span> sir</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="/assets/images/event.png" alt="">
+                <div class="layer">
+                    <h3>Director</h3>
+                    <p>shri <span class="span">Sathyanarayan</span> sir</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="/assets/images/th.jpeg" alt="">
+                <div class="layer">
+                    <h3>HOD</h3>
+                    <p><span class="span">Dr. Latha</span> Malladi</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="dep-para">
+          <h3>About our department head</h3>
+          <p>The Head Faculties of SMIC play a vital role in shaping the academic excellence and overall environment of the institution. With years of experience and deep expertise in their respective fields, they not only deliver knowledge but also ignite a passion for learning among students. Their leadership ensures that the college stays committed to innovation, discipline, and high educational standards. They actively mentor students, helping them in academic pursuits, career planning, and personal growth.
+
+            By fostering a culture of curiosity, creativity, and critical thinking, the Head Faculties help students become future leaders and responsible citizens. They encourage research, participation in various activities, and the pursuit of excellence both inside and outside the classroom. Their vision and dedication continue to drive SMIC towards becoming one of the most respected institutions in the region.
+            
+            Through their hard work and commitment, the Head Faculties inspire both students and fellow educators to achieve greater heights every day.
+          </p>
+        </div>
+
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+
+
+<!-----------------notes--------------->
+<div id="container2">
+    <h2>Notes Selection</h2>
+  
+    <label for="branch" class="selection">Select Branch:</label>
+    <select id="branch">
+      <option value="">-- Select Branch --</option>
+      <option value="CSE">CSE</option>
+      <option value="AIDS">AI & DS</option>
+      <option value="AIML">AI & ML</option>
+    </select>
+  
+    <label for="year" class="selection">Select Year:</label>
+    <select id="year" disabled>
+      <option value="">-- Select Year --</option>
+    </select>
+  
+    <label for="semester" class="selection">Select Semester:</label>
+    <select id="semester" disabled>
+      <option value="">-- Select Semester --</option>
+    </select>
+  
+    <label for="subject" class="selection">Select Subject:</label>
+    <select id="subject" disabled>
+      <option value="" class="selection">-- Select Subject --</option>
+    </select>
+   </div>
+<!------------------------------Syllabys---------------------------->
+   <div class="Syllabus">
+    <h2 class="syl-h2">Download Syllabus</h2>
+    <button class="downloadBtn" data-syllabus="/assets/pdf/CSE.pdf">
+      CSE Syllabus
+    </button>
+    <button class="downloadBtn" data-syllabus="/assets/pdf/AIDS.pdf">
+     AIDS Syllabus
+    </button>
+    <button class="downloadBtn" data-syllabus="/assets/pdf/AIML.pdf">
+     AIML Syllabus
+    </button>
+  </div>
+  
+  <script>
+    const downloadButtons = document.querySelectorAll('.downloadBtn');
+  
+    downloadButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const syllabusPath = this.getAttribute('data-syllabus');
+        const courseName = this.textContent.split(' ')[1]; // Extract CSE, AIDS, or AIML
+  
+        if (confirm(`Do you want to download the syllabus for ${courseName}?`)) {
+          window.location.href = syllabusPath;
+        } else {
+          alert('Download cancelled.');
+        }
+      });
+    });
+  </script>
+
+  <!-------------Learn code------------------>
+  
+
+  <div class="code-container">
+    <div class="code1">
+      <h2 class="code-h2">Learn Code Here </h2>
+      <button class="codebtn"><a href="https://www.codecademy.com/learn">CodeAcademy </a> </button>
+      <button class="codebtn"> <a href="https://www.w3schools.com/">W3 Schools</a></button>
+      <button class="codebtn"> <a href="https://www.w3schools.com/html/default.asp">HTML</a></button>
+      <button class="codebtn"> <a href="https://www.w3schools.com/css/default.asp">CSS</a></button>
+      <button class="codebtn"> <a href="https://www.w3schools.com/js/default.asp">Java Script</a></button>
+      <button class="codebtn"> <a href="https://www.w3schools.com/python/default.asp">Python</a></button>
+      <button class="codebtn"> <a href="https://www.w3schools.com/c/index.php">C</a></button>
+    </div>
+  
+    <div class="code">
+      <h2 class="code-h2">Enhance your SKills with <br> These websites </h2>
+      <button class="codebtn"><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a> </button>
+      <button class="codebtn"> <a href="https://www.freecodecamp.org/">freeCodeCamp</a></button>
+      <button class="codebtn"> <a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a></button>
+      <button class="codebtn"> <a href="https://stackoverflow.com/">Stack Overflow</a></button>
+      <button class="codebtn"> <a href="https://github.com/">GitHub</a></button>
+      <button class="codebtn"> <a href="https://www.coursera.org/">Coursera</a></button>
+      <button class="codebtn"> <a href="https://www.edx.org/">edX</a></button>
+    </div>
+  </div>
+   <script>
+
+    
+    // Data structure containing notes information (Branch -> Year -> Semester -> Subject -> PDF Path)
+    // Ensure the keys (CSE, AIDS, AIML) match the 'value' attributes in the branch select options
+    const data = {
+      CSE: {
+          "1st Year": {
+            "1st Semester": {
+              "theory Exams ( External ) : 👇": "", // Placeholder/Label
+              "EC": "https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-engineering-chemistry-notes-unit-wise.47774/",
+              "M1": "https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-matrices-and-calculus-notes-unit-wise.47773/",
+              "PPS": "https://drive.google.com/file/d/1XfpptZNhhl_hN-oLZ-_gMTx9phv32dOG/view",
+              "BEE": "https://drive.google.com/file/d/1_5rzLLCjhMAAUUaXSm0AJQzeDsSfEpsz/view",
+              "CAEG":"https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-computer-aided-engineering-graphics-study-material-notes.39442/",
+              "LAB Exams ( internal ): 👇":"", // Placeholder/Label
+              "BEE Lab": "assets/pdf/BEE-Lab.pdf", // Renamed for clarity
+              "EC Lab": "assets/pdf/EC.pdf", // Renamed for clarity
+              "CAEG Lab": "assets/pdf/CAEG.pdf", // Renamed for clarity
+              "PPS Lab": "assets/pdf/PPS-Lab.pdf" // Renamed for clarity
+            },
+            "2nd Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "M2": "https://drive.google.com/drive/folders/1nfIXg1E5sKDmldR7PerdVOq3UvUQSPHu",
+              "PPL": "assets/pdf/python.pdf", // Note: Path seems repeated, verify if correct
+              "AP": "https://drive.google.com/file/d/1XrYYeM1RYoRc-UxhfSMlm802KV83JLXh/view", // Note: Path seems repeated, verify if correct
+              "ELCS":"https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-english-for-skill-enhancement-notes-unit-wise.47778/", // Note: Path seems repeated, verify if correct
+              "EDC":"assets/pdf/EDC.pdf", // Note: Path seems repeated, verify if correct
+              "LAB Exams ( internal ): 👇":"",
+              "AP Lab": "assets/pdf/AP.pdf", // Renamed for clarity
+              "EWS": "assets/pdf/EWS.pdf", // Note: Path seems repeated, verify if correct
+              "ELCS Lab": "assets/pdf/ELCS-Lab.pdf", // Renamed for clarity
+              "PPL Lab (2nd Sem)": "assets/pdf/python.pdf", // Renamed for clarity
+              "IT-Lab": "assets/pdf/IT-Lab.pdf" // Note: Path seems repeated, verify if correct
+            }
+          },
+          "2nd Year": {
+            "3rd Semester": { // Corrected key from "3rd semester"
+              "theory Exams ( External ) : 👇": "",
+              "Computer Oriented Statical Methods": "assets/pdf/COSM.pdf",
+              "Digital Electronics": "assets/pdf/Digital_Electronics.pdf",
+              "Data Structures": "assets/pdf/Data_Structure.pdf", // Verify path
+              "Computer Organization & Architecture":"assets/pdf/COA.pdf", // Verify path
+              "OOPS through Java":"assets/pdf/OOPS.pdff", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "Data Structure (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "OOPS through Java (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Data visualization - R programming/ power BI": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // 
+              "Gender Sensitization (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf" // Renamed & Verify path
+            },
+            "4th Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "Discrete Mathematics": "assets/pdf/DM.pdf",
+              "BEFA": "assets/pdf/BEFA.pdf", // Verify path
+              "OS": "assets/pdf/OS.pdf", // Verify path
+              "Database Management System":"assets/pdf/DMS.pdf", // Verify path
+              "Software Engineering":"assets/pdf/SE.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "BEFA Lab": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Database Management System (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Operating System (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Node Js/ React JS/ Django": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Real Time Research Project": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Consititution of India": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+            }
+          },
+          "3rd Year": {
+            "5th Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "DevOps": "pdfs/regular.pdf",
+              "Computer Networks": "assets/pdf/com_net.pdf",
+              "Design & Analysis of Algorithms": "assets/pdf/DAA.pdf", // Verify path
+              "professional Elective-1": "assets/pdf/.pdf", // Verify path
+              "Professional Elective-2":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "DevOps Lab": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Computer Network (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Advanced English Communication Skill (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", 
+              "UI design-Flutter": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Intellectual Property Rights": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf" // Renamed & Verify path
+            },
+            "6th Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "Machine Learning": "assets/pdf/ML.pdf", // Duplicate subject name?
+              "Formal Languages and Automata Theory": "assets/pdf/FLAT.pdf", // Verify path
+              "Artificial Inteligence": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "Professional Elective-3":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "Open Elective-1":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "Machine Learning (Lab)": "assets/pdf/ML1.pdf", // Renamed & Verify path
+              "Artificila Inteligence (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Professional Elective-3 (Lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Industrial Orienteted Mini Projects": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Environmental Science": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf" // Renamed & Verify path
+            }
+          },
+          "4th Year": {
+            "7th Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "Cyptography & Network Security": "pdfs/regular.pdf",
+              "Compiler Design": "assets/notes/CSE/1stYear/1stSem/Programming_in_C.pdf", // Duplicate subject name? Verify path
+              "Professional Elective-4": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "Professional Elective-5":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "Open Elective-2":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "Cyptography & Network Security (lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "COmpiler Design (lab)": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Renamed & Verify path
+              "Project stage - 1": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf" // Renamed & Verify path
+            },
+            "8th Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "Organizational Behaviour": "pdfs/regular.pdf", // Corrected typo
+             "Professional Elective-6": "assets/notes/CSE/1stYear/1stSem/Programming_in_C.pdf", // Verify path
+              "Open Elective-3": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "Project Stage-2 including seminar": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              
+            }
+          },
+        },
+      AIDS: { // Key matches HTML value="AIDS"
+      "1st Year": {
+            "1st Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "M1": "https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-matrices-and-calculus-notes-unit-wise.47773/",
+              "PPS": "https://drive.google.com/file/d/1XfpptZNhhl_hN-oLZ-_gMTx9phv32dOG/view", // Verify path
+              "AP": "https://drive.google.com/file/d/1XrYYeM1RYoRc-UxhfSMlm802KV83JLXh/view", // Verify path
+              "ELCS":"https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-english-for-skill-enhancement-notes-unit-wise.47778/", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "AP Lab": "assets/pdf/AP.pdf", // Renamed & Verify path
+              "EWS": "assets/pdf/EWS.pdf", // Verify path
+              "ELCS Lab": "assets/pdf/ELCS-Lab.pdf", // Renamed & Verify path
+              "PPL Lab": "assets/python.pdf", // Renamed & Verify path
+              "IT-Lab": "assets/pdf/IT-Lab.pdf" // Verify path
+            },
+            "2nd Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "EC": "https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-engineering-chemistry-notes-unit-wise.47774/",
+              "M2": "https://drive.google.com/drive/folders/1nfIXg1E5sKDmldR7PerdVOq3UvUQSPHu",
+              "PPS": "assets/pdf/PPS.pdf", // Verify path
+              "BEE": "https://drive.google.com/file/d/1_5rzLLCjhMAAUUaXSm0AJQzeDsSfEpsz/view", // Verify path
+              "CAEG":"https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-computer-aided-engineering-graphics-study-material-notes.39442/", // Verify path
+              "EDC":"assets/pdf/EDC.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "BEE Lab": "assets/pdf/BEE.pdf", // Renamed & Verify path
+              "EC Lab": "assets/pdf/EC.pdf", // Renamed & Verify path
+              "CAEG Lab": "assets/CAEG.pdf", // Renamed & Verify path
+              "PPL Lab (2nd Sem)": "assets/pdf/python.pdf", // Renamed & Verify path
+              "IT-Lab (2nd Sem)": "assets/pdf/IT-Lab.pdf" // Renamed & Verify path
+            }
+          },
+          "2nd Year": {
+            "3rd Semester": {
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "mathematical & Statical Foundation": "assets/pdf/MSF.pdf",
+              "Data Structures": "assets/pdf/Data_Structure.pdf", // Verify path
+              "Computer Organization & Architecture": "assets/pdf/DOA.pdf", // Verify path
+               "Digital Electronic ": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf" ,
+              "Object Oriented Programming (java)": "assets/pdf/OOPS.pdf", // Corrected typo
+              "LAB Exams ( internal ): 👇":"", 
+              "Data Structure (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", 
+              "Skill Dev courses(lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", 
+              "Java programming (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", 
+              
+            },
+            "4th Semester": {
+               "theory Exams ( External ) : 👇": "",
+               "Discrete Mathematics": "assets/pdf/DM.pdf",
+               
+              "Introduction To AI": "assets/notes/CSE/2ndYear/4thSem/Software_Engineering.pdf", // Verify path
+              "Database management Systems(DBMS)": "assets/pdf/DMS.pdf",
+              "Operating System ": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Software Engineering": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Real Time Research project": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"", // Added lab section
+              "Database Management System (lab)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Operating System (lab)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Skill Dev Course(nodeJs/ ReactJS/ Django)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf" // Verify path
+            }
+          },
+          "3rd Year": {
+            "5th Semester": {
+               "theory Exams ( External ) : 👇": "", // Added theory section
+              "Design and Analysis of Algorithms": "assets/notes/CSE/2ndYear/3rdSem/OOPs_using_Java.pdf", // Verify path
+              "Introduction To Data Science": "assets/notes/CSE/2ndYear/3rdSem/DBMS.pdf", // Verify path
+              "Computer Networks": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Corrected typo, removed duplicate
+              "Bussiness Economics & FA": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Professional Elective-1": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"", // Added lab section
+              "Introduction To DS using R (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Computer Network (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Advanced Communication Skills (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf",// Verify path
+              "Intelectual Property Right": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Skill Development Course": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+            },
+            "6th Semester": {
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "Automata theory and COmpiler Design": "assets/notes/CSE/2ndYear/4thSem/Computer_Networks.pdf", // Corrected typo
+              "Machine Learning": "assets/notes/CSE/2ndYear/4thSem/Software_Engineering.pdf", // Verify path
+              "Big Data Analytics": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Corrected typo
+              "Professional Elective-2": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Corrected typo
+              "Open Elective-1": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"", // Added lab section
+              "Machine Learning (lab)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Big Data Analytic (lab)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Corrected typo
+              "IOP /Internship/": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Corrected typo
+              "Envoronmental Science": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf" // Corrected typo
+            }
+          },
+          "4th Year": {
+            "7th Semester": {
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "Introduction To Predictive Analytic": "assets/notes/CSE/2ndYear/3rdSem/OOPs_using_Java.pdf", // Verify path
+              "Web and Social Media Analytic": "assets/notes/CSE/2ndYear/3rdSem/DBMS.pdf", // Verify path
+              "Professional Elective-3": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Professional Practice Law and Ethics": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Open Elective-3": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+
+               "LAB Exams ( internal ): 👇":"", // Added lab section
+              "Professional Elective-3 (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Major Project phase-1": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf" // Verify path
+            },
+            "8th Semester": {
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "Open Elective-3": "assets/notes/CSE/2ndYear/4thSem/Computer_Networks.pdf", // Verify path
+              "Professional Elective-4": "assets/notes/CSE/2ndYear/4thSem/Software_Engineering.pdf", // Verify path
+              "Professional Elective-5": "assets/notes/CSE/2ndYear/4thSem/Software_Engineering.pdf", // Verify path
+              "Major Project phase-2 including seminar": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf" // Verify path
+            }
+          }
+        },
+      AIML: { // Key matches HTML value="AIML"
+         "1st Year": {
+            "1st Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "M1": "https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-matrices-and-calculus-notes-unit-wise.47773/",
+              "PPS": "https://drive.google.com/file/d/1XfpptZNhhl_hN-oLZ-_gMTx9phv32dOG/view", // Verify path
+              "AP": "https://drive.google.com/file/d/1XrYYeM1RYoRc-UxhfSMlm802KV83JLXh/view", // Verify path
+              "ELCS":"https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-english-for-skill-enhancement-notes-unit-wise.47778/", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "AP Lab": "assets/pdf/AP.pdf", // Renamed & Verify path
+              "EWS": "assets/pdf/EWS.pdf", // Verify path
+              "ELCS Lab": "assets/pdf/ELCS-Lab.pdf", // Renamed & Verify path
+              "PPL Lab": "assets/python.pdf", // Renamed & Verify path
+              "IT-Lab": "assets/pdf/IT-Lab.pdf" // Verify path
+            },
+            "2nd Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "EC": "https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-engineering-chemistry-notes-unit-wise.47774/",
+              "M2": "https://drive.google.com/drive/folders/1nfIXg1E5sKDmldR7PerdVOq3UvUQSPHu",
+              "PPS": "assets/pdf/PPS.pdf", // Verify path
+              "BEE": "https://drive.google.com/file/d/1_5rzLLCjhMAAUUaXSm0AJQzeDsSfEpsz/view", // Verify path
+              "CAEG":"https://www.forum.universityupdates.in/threads/jntuh-b-tech-r22-computer-aided-engineering-graphics-study-material-notes.39442/", // Verify path
+              "EDC":"assets/pdf/EDC.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"",
+              "BEE Lab": "assets/pdf/BEE.pdf", // Renamed & Verify path
+              "EC Lab": "assets/pdf/EC.pdf", // Renamed & Verify path
+              "CAEG Lab": "assets/CAEG.pdf", // Renamed & Verify path
+              "PPL Lab (2nd Sem)": "assets/pdf/python.pdf", // Renamed & Verify path
+              "IT-Lab (2nd Sem)": "assets/pdf/IT-Lab.pdf" // Renamed & Verify path
+            }
+          },
+          "2nd Year": {
+            "3rd Semester": {
+              "theory Exams ( External ) : 👇": "",
+              "Discrete Mathematics": "pdfs/regular.pdf",
+              "Data Structures": "pdfs/regular.pdf",
+              "Computer Organization & Architecture": "assets/notes/CSE/1stYear/1stSem/Programming_in_C.pdf", // Verify path
+              "Software Engineering": "assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "Operating Systems":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"", // Added lab section
+              "Data Structure (Lab)":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "DBMS Lab":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf" ,// Verify path
+              "Operating Systems (lab)":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "Software Engineering (lab)":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "Constitution of India":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+              "SDC(nodeJs/ ReactJs/ Django)":"assets/notes/CSE/1stYear/1stSem/Engineering_Drawing.pdf", // Verify path
+
+            },
+            "4th Semester": {
+               "theory Exams ( External ) : 👇": "", // Added theory section
+              "Mathematics & Statical Foundation": "assets/notes/CSE/2ndYear/4thSem/Computer_Networks.pdf", // Verify path
+              "Automata Theory and Compiler Design": "assets/notes/CSE/2ndYear/4thSem/Software_Engineering.pdf", // Verify path
+              "Database Management System": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Introduction To AI": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "OOPS by Java": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"", // Added lab section
+              "Database Management System (Lab)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Gender Sensitization (lab)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Real Time Research Project ": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Java Programming (lab)": "assets/pdf/Java-Lab.pdf", // Verify path
+              "Skill Dev Course (Prolog/Lisp/Pyswip)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+
+            }
+          },
+          "3rd Year": {
+            "5th Semester": {
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "Design & Analysis Of Algorithms": "assets/notes/CSE/2ndYear/4thSem/Computer_Networks.pdf", // Verify path
+              "Machine Learning": "assets/notes/CSE/2ndYear/4thSem/Software_Engineering.pdf", // Verify path
+              "Computer Networks": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "BE & FA": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Professional Elective-1": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"", // Added lab section
+              "ML lab": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Data Mining (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Computer Network (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Advanced Communication Skill (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Intellectual Property Rights": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Skill Dev Courses (UI design-Flutter)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+            },
+            "6th Semester": { // Corrected key from "6th semester"
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "Knowledge Representation & Reasoning": "assets/notes/CSE/2ndYear/4thSem/Computer_Networks.pdf", // Verify path
+              "Data Analytic": "assets/notes/CSE/2ndYear/4thSem/Software_Engineering.pdf", // Verify path
+              "Natural Language Processing": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Professional Elective-2": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Open Elective-1": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"", // Added lab section
+              "Data Analytic (lab)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "NLP (lab)": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Industrial Oriented Mini Project/ Internship ": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+              "Environmental Science ": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf", // Verify path
+            }
+          },
+          "4th Year": {
+            "7th Semester": { // Corrected key from "6th Semester"
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "Deep Learning": "assets/notes/CSE/2ndYear/3rdSem/OOPs_using_Java.pdf", // Verify path
+              "Nature Inspired Computing": "assets/notes/CSE/2ndYear/3rdSem/DBMS.pdf", // Verify path
+              "Explainable AI (XAI)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Professional Elective-3": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Professional Elective-4": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Open Elective-2": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Professional Practice, Law & Ethics": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "LAB Exams ( internal ): 👇":"", // Added lab section
+              "Professional Elective-3 (lab)": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Major Project Phase -1": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf" // Verify path
+            },
+            "8th Semester": { // Corrected key from "7th Semester"
+              "theory Exams ( External ) : 👇": "", // Added theory section
+              "Professional Elective-5": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Professional Elective-6": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Open Elective-3": "assets/notes/CSE/2ndYear/3rdSem/Operating_Systems.pdf", // Verify path
+              "Major project Phase-2 including Seminar": "assets/notes/CSE/2ndYear/4thSem/Web_Technologies.pdf" // Verify path
+            }
+          }
+        }
+     };
+  
+    // --- Get references to the dropdown elements ---
+    const branchSelect = document.getElementById('branch');
+    const yearSelect = document.getElementById('year');
+    const semesterSelect = document.getElementById('semester');
+    const subjectSelect = document.getElementById('subject');
+  
+    // --- Helper function to reset and disable dropdowns ---
+    function resetDropdown(selectElement, defaultOptionText) {
+        selectElement.innerHTML = `<option value="">-- ${defaultOptionText} --</option>`;
+        selectElement.disabled = true;
+    }
+  
+    // --- Event Listener for Branch Selection ---
+    branchSelect.addEventListener('change', function () {
+      const selectedBranch = this.value;
+  
+      // Reset subsequent dropdowns
+      resetDropdown(yearSelect, 'Select Year');
+      resetDropdown(semesterSelect, 'Select Semester');
+      resetDropdown(subjectSelect, 'Select Subject');
+  
+      // Check if a valid branch is selected and data exists for it
+      if (selectedBranch && data[selectedBranch]) {
+        yearSelect.disabled = false; // Enable year dropdown
+        // Populate year dropdown
+        Object.keys(data[selectedBranch]).forEach(year => {
+          const option = document.createElement('option');
+          option.value = year;
+          option.textContent = year;
+          yearSelect.appendChild(option);
+        });
+      }
+      // If no branch selected or no data, keep subsequent dropdowns disabled (handled by reset)
+    });
+  
+    // --- Event Listener for Year Selection ---
+    yearSelect.addEventListener('change', function () {
+      const selectedBranch = branchSelect.value;
+      const selectedYear = this.value;
+  
+      // Reset subsequent dropdowns
+      resetDropdown(semesterSelect, 'Select Semester');
+      resetDropdown(subjectSelect, 'Select Subject');
+  
+      // Check if a valid year is selected and data exists
+      if (selectedYear && data[selectedBranch] && data[selectedBranch][selectedYear]) {
+        semesterSelect.disabled = false; // Enable semester dropdown
+        // Populate semester dropdown
+        Object.keys(data[selectedBranch][selectedYear]).forEach(semester => {
+          const option = document.createElement('option');
+          option.value = semester;
+          option.textContent = semester;
+          semesterSelect.appendChild(option);
+        });
+      }
+      // If no year selected or no data, keep subsequent dropdowns disabled
+    });
+  
+    // --- Event Listener for Semester Selection ---
+    semesterSelect.addEventListener('change', function () {
+      const selectedBranch = branchSelect.value;
+      const selectedYear = yearSelect.value;
+      const selectedSemester = this.value;
+  
+      // Reset subject dropdown
+      resetDropdown(subjectSelect, 'Select Subject');
+  
+      // Check if a valid semester is selected and data exists
+      if (selectedSemester && data[selectedBranch] && data[selectedBranch][selectedYear] && data[selectedBranch][selectedYear][selectedSemester]) {
+        subjectSelect.disabled = false; // Enable subject dropdown
+        // Populate subject dropdown
+        const subjects = data[selectedBranch][selectedYear][selectedSemester];
+        Object.keys(subjects).forEach(subject => {
+          // Create option only if it's a real subject (not a placeholder/label)
+          if (subjects[subject]) { // Check if the value (path) is not empty
+              const option = document.createElement('option');
+              option.value = subject; // Use subject name as value
+              option.textContent = subject; // Display subject name
+              subjectSelect.appendChild(option);
+          } else if (subject.includes(': 👇')) { // Add placeholders as disabled options for visual grouping
+              const option = document.createElement('option');
+              option.value = ""; // No value for placeholders
+              option.textContent = subject;
+              option.disabled = true; // Make placeholders unselectable
+              subjectSelect.appendChild(option);
+          }
+        });
+      }
+      // If no semester selected or no data, keep subject dropdown disabled
+    });
+  
+    // --- *** NEW: Event Listener for Subject Selection (to open PDF) *** ---
+    subjectSelect.addEventListener('change', function() {
+        const selectedBranch = branchSelect.value;
+        const selectedYear = yearSelect.value;
+        const selectedSemester = semesterSelect.value;
+        const selectedSubject = this.value; // The subject name
+  
+        // Check if a valid subject (not the placeholder) is selected
+        if (selectedSubject && data[selectedBranch]?.[selectedYear]?.[selectedSemester]?.[selectedSubject]) {
+            const pdfPath = data[selectedBranch][selectedYear][selectedSemester][selectedSubject];
+  
+            // Check if the path is not empty before trying to open
+            if (pdfPath) {
+                console.log("Opening PDF:", pdfPath); // For debugging
+                window.open(pdfPath, '_blank'); // Open the PDF in a new tab
+            } else {
+                console.log("No PDF path defined for:", selectedSubject);
+            }
+        } else {
+            console.log("Invalid selection or no PDF path found.");
+        }
+  
+        // Optional: Reset subject selection to placeholder after opening?
+        // this.value = "";
+    });
+  
+   </script>
+     <script>
+        const navMenu = document.getElementById('sidemenu');
+        const menuBar = document.querySelector('.open-menu');
+        const closeMenu = document.querySelector('.close-menu');
+    
+        if (menuBar) {
+            menuBar.addEventListener('click', () => {
+                navMenu.style.display = 'flex';
+                navMenu.classList.add('active');
+                menuBar.style.display = 'none';
+                closeMenu.style.display = 'block';
+            });
+        }
+    
+        if (closeMenu) {
+            closeMenu.addEventListener('click', () => {
+                navMenu.style.display = 'none';
+                navMenu.classList.remove('active');
+                menuBar.style.display = 'block';
+                closeMenu.style.display = 'none';
+            });
+        }
+        </script>
+
+
+  <footer>
+    <p>
+      Developed with ❤️ by 
+      <a href="https://venkycodex.github.io/my-web2/" target="_blank"> Venky </a> 
+      <span class="name">|| Venkat Sailu Makkalwar ||</span> 
+      &copy; 2025 All rights reserved.
+    </p>
+  </footer>
+
+  
+</body>
+</html>
